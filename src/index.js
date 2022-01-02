@@ -13,5 +13,6 @@ for(let i = 0; i < anchors.length; i++)
 function setDetails(anchor)
 {
     detailsImage.setAttribute("src",anchor.getAttribute("href"));
-    detailsTitle.textContent = anchor.getAttribute("data-details-title");
+    detailsTitle.textContent = anchor.querySelector(".thumbnails-title").textContent + ": " + anchor.getAttribute ("data-details-title");
+
 }
