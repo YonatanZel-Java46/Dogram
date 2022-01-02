@@ -2,6 +2,7 @@ console.log("script launched");
 let detailsTitle = document.querySelector(".details-title");
 let detailsImage = document.querySelector(".details-image");
 let anchors = document.querySelectorAll(".thumbnails-anchor");//all html elements belonging class thumbnails-anchor
+let thumbnailsTitle = document.querySelector(".thumbnails-title");
 for(let i = 0; i < anchors.length; i++)
 {
     anchors[i].addEventListener("click", function(event)
@@ -13,6 +14,6 @@ for(let i = 0; i < anchors.length; i++)
 function setDetails(anchor)
 {
     detailsImage.setAttribute("src",anchor.getAttribute("href"));
-    detailsTitle.textContent = anchor.querySelector(".thumbnails-title").textContent + ": " + anchor.getAttribute ("data-details-title");
+    detailsTitle.textContent = thumbnailsTitle.textContent + ": " + anchor.getAttribute ("data-details-title");
 
 }
